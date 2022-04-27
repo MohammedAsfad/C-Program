@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main(){
+
+    char letter = 'A';  //NOTE ! letter + 1 = 'B'
+    int i, rows, space, k = 0;
+
+    printf("Enter number of rows: \t");
+        scanf("%i", &rows);
+
+
+
+    while(rows < 4 || rows > 26){
+        printf("\nError !\nMin : 4\tMax : 26\n");
+            scanf("%i", &rows);
+
+    }
+
+
+
+    for(i = 1; i <= rows; i++,k =0){
+        for(space = 1; space <= rows - i; space++){
+            printf(" ");
+
+        }
+
+        for(; k!= 2* i-1; k++){
+            printf("%c", letter);
+        }
+
+        for (char temp = letter + 1; temp <= letter; temp--){
+            printf("%c", temp);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
